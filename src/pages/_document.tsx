@@ -1,6 +1,9 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { Header } from '@/components/Header'
+import { useState } from 'react';
 
 export default function Document() {
+
   return (
     <Html lang="en">
       <Head />
