@@ -8,6 +8,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      gradientSize: {
+        'ellipse-long': '200% 100%',
+      },
       fontFamily: {
         'Lato': ['Lato', 'sans-serif'],
         'Pencil': ['Coming Soon', 'cursive']

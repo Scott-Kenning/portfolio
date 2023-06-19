@@ -2,59 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.paper {
-    background-image: linear-gradient(#b8bcc1 1px, transparent 0px);
-    background-size: 100% 2em;
-    background-position-y: 1.5rem;
-    line-height: 2em;
-}
-
-.darkBackground {
-    --s: 50px;
-    --c: #191b22;
-    --_s: calc(2*var(--s)) calc(2*var(--s));
-    --_g: 35.36% 35.36% at;
-    --_c: #0000 66%,#20222a 68% 70%,#0000 72%;
-    background: 
-      radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
-      radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
-      radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
-      radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
-      repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
-      radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-    background-attachment: fixed;
-}
-
-.lightBackground {
-    --s: 50px;
-    --c: #e8e8e8;
-    --_s: calc(2*var(--s)) calc(2*var(--s));
-    --_g: 35.36% 35.36% at;
-    --_c: #bfbfbf00 66%,#e1e1e1 68% 70%,#bebebe00 72%;
-    background: 
-      radial-gradient(var(--_g) 100% 25%,var(--_c)) var(--s) var(--s)/var(--_s), 
-      radial-gradient(var(--_g) 0 75%,var(--_c)) var(--s) var(--s)/var(--_s), 
-      radial-gradient(var(--_g) 100% 25%,var(--_c)) 0 0/var(--_s), 
-      radial-gradient(var(--_g) 0 75%,var(--_c)) 0 0/var(--_s), 
-      repeating-conic-gradient(var(--c) 0 25%,#0000 0 50%) 0 0/var(--_s), 
-      radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-    background-attachment: fixed;
-}
-
-/* body {
-    background: linear-gradient(-45deg, black, #19005e, #004863, #5c5c5c);
-    background-size: 1000% 1000%;
-    animation: gradient 5s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-} */
+body::-webkit-scrollbar {
+    @apply w-2;
+    @apply overflow-y-auto;
+    @apply cursor-pointer;
+  }
+  
+  body::-webkit-scrollbar-track {
+    @apply bg-slate-800;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    @apply bg-slate-600 hover:bg-slate-700 rounded-lg cursor-auto;
+  }

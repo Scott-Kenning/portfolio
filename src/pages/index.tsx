@@ -8,6 +8,10 @@ import { Header } from '@/components/Header'
 import { useState } from 'react'
 import { PageLink } from '@/components/Link'
 import { ClassesContainer } from '@/components/ClassesContainer'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
+import Image from 'next/image'
+import aboutImage from "public/undraw_drink_coffee_jdqb.svg"
+import { About } from '@/components/About'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,26 +30,30 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
       </Head>
-      <main className={`flex flex-col items-center w-100 font-Lato ${darkMode ? "text-white dark darkBackground" : "lightBackground"}`}>
-        <Header handleClick={() => setDarkMode(!darkMode)}/>
-        <div className='flex flex-col items-center w-9/12'>
-          <Hero/>
-          <SectionTitle title="Featured Project"/>
-          <div className="flex flex-col mb-32 items-center">
-            <ProjectCard/>
-            {/* <PageLink url="https://google.ca" text="View My Github"/> */}
-          </div>
-          <SectionTitle title="Relevant Classes"/>
-          <ClassesContainer/>
-          <div className='flex flex-col w-full px-4 text-black dark:text-gray-100 mt-16'>
-            <SectionTitle title="Co-op Experience"/>
+      <main className="overflow-y-auto flex flex-col items-center w-100 font-Lato text-white bg-auto bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#23486F] via-[#192532] to-[#10131C]">
+        <div className='flex flex-col items-center md:w-9/12 w-11/12 gap-48'>
+
+          <Hero/>  
+
+          <AnimationOnScroll animateIn="animate__fadeIn" delay={200} animateOnce={true}>
+            <SectionTitle title="About Me"/>
+            <About/>
+          </AnimationOnScroll>
+
+          <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+            <SectionTitle title="Featured Project"/>
+            <div className="flex flex-col items-center">
+              <ProjectCard/>
+            </div>
+          </AnimationOnScroll>
+
+          <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+          <div className='flex flex-col w-full px-4 mt-16'>
+            <SectionTitle title="Work Experience"/>
             <Work/>
           </div>
-          <div className='w-full flex justify-center mt-32 mb-4'>
-            <div className="h-8 w-8 rounded-full bg-white mx-2"></div>
-            <div className="h-8 w-8 rounded-full bg-white mx-2"></div>
-            <div className="h-8 w-8 rounded-full bg-white mx-2"></div>
-          </div>
+          </AnimationOnScroll>
+
         </div>
       </main>
     </>
