@@ -5,9 +5,9 @@ import Image from "next/image";
 export const Hero = () => {
   
     return (
-        <div className="flex flex-col-reverse md:flex-row md:mt-48 md:mb-0 my-72">
+        <div className="flex flex-col-reverse md:flex-row h-screen justify-center">
             <div className="flex flex-col md:mr-8 justify-center text-center">
-              <h1 className='text-4xl md:text-7xl'> Scott Kenning</h1>
+              <h1 className='text-4xl md:text-8xl'> Scott Kenning</h1>
               <TypeAnimation
                 sequence={[
                   "Software Engineering Student",
@@ -23,7 +23,7 @@ export const Hero = () => {
                 className="font-mono"
               />
             </div>
-            <Image src={heroImage} alt="Hero Image" width={300} height={300} className="mb-8"/>
+            <Image src={heroImage} alt="Hero Image" width={450} height={350} className="mb-8"/>
         </div>
     )
 }

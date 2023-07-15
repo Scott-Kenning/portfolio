@@ -30,17 +30,17 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
       </Head>
-      <main className="overflow-y-auto flex flex-col items-center w-100 font-Lato text-white bg-auto bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#23486F] via-[#192532] to-[#10131C]">
-        <div className='flex flex-col items-center md:w-9/12 w-11/12 gap-48'>
+      <main className="overflow-y-auto flex flex-col items-center w-100 font-Lato text-white text-lg bg-auto bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#23486F] via-[#192532] to-[#10131C]">
+        <div className='flex flex-col items-center md:w-8/12 w-11/12'>
 
           <Hero/>  
 
-          <AnimationOnScroll animateIn="animate__fadeIn" delay={200} animateOnce={true}>
+          <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} className='mb-96'>
             <SectionTitle title="About Me"/>
             <About/>
           </AnimationOnScroll>
 
-          <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true}>
+          <AnimationOnScroll animateIn="animate__fadeIn" animateOnce={true} className='mb-96'>
             <SectionTitle title="Featured Project"/>
             <div className="flex flex-col items-center">
               <ProjectCard/>
