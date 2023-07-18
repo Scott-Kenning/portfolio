@@ -13,7 +13,8 @@ module.exports = {
       },
       fontFamily: {
         'Lato': ['Lato', 'sans-serif'],
-        'Pencil': ['Coming Soon', 'cursive']
+        'Pencil': ['Coming Soon', 'cursive'],
+        'sans': ['Montserrat', 'sans-serif']
       },
       keyframes: {
         toggleLeft: {
@@ -24,11 +25,16 @@ module.exports = {
           to: { transform: "translate(2em)" },
           from: { transform: "translate(0)" },
         },
+        expand: {
+          '0%': { width: '33.33%' },
+          '100%': { width: '100%' },
+        },
       },
       animation: {
         wiggle: "wiggle 200ms ease-in-out",
         toggleLeft: "toggleLeft 200ms",
-        toggleRight: "toggleRight 200ms"
+        toggleRight: "toggleRight 200ms",
+        expand: 'expand 0.5s forwards',
       },
       transitionProperty: {
         'height': 'height'

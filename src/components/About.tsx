@@ -1,24 +1,14 @@
-import Image from 'next/image'
-import aboutImage from "public/undraw_drink_coffee_jdqb.svg"
+import heroImage from "public/undraw_developer_activity_re_39tg.svg"
+import Image from "next/image";
 
-export const About = () => {
+export default function About() {
     return (
-        <div className="flex flex-col items-center md:flex-row gap-16 min-h-96">
-              <Image src={aboutImage} alt="Scott Kenning" width={400} height={400} className="rounded-full bg-slate-700 shadow h-min"/>
-              <div className="flex flex-col bg-slate-700 w-100 rounded-lg shadow-lg p-4 gap-y-4">
-                <p>My name's Scott, and I'm a third year Software Engineering student at the University of Victoria. I specialize in web development (Particularily React and Tailwind), but I enjoy any sort of programming.</p>
-                <p>I'm a team lead for <a href="/" className='font-semibold'>Vikelabs</a>, leading a group of other students to create StudySpaceFinder, a website by UVic students, for UVic students.</p>
-                <p>Outside of the world of computers, I enjoy hiking, nature, and the occasional round of golf.</p>
-                
-                <div className='h-full w-100 flex flex-wrap-reverse gap-2 justify-end items-start font-mono'>
-                  <div className="rounded-lg bg-slate-600 text-center px-2 py-1 h-min">React</div>
-                  <div className="rounded-lg bg-slate-600 text-center px-2 py-1 h-min">Tailwind</div>
-                  <div className="rounded-lg bg-slate-600 text-center px-2 py-1 h-min">HTMl</div>
-                  <div className="rounded-lg bg-slate-600 text-center px-2 py-1 h-min">CSS</div>
-                  <div className="rounded-lg bg-slate-600 text-center px-2 py-1 h-min">JavaScript</div>
-
-                </div>
-              </div>
-            </div>
+        <div className="flex flex-col items-start justify-center space-y-6 p-10 text-white max-w-screen-lg mx-auto">
+            <Image src={heroImage} alt="Hero Image" width={450} height={350} className="mb-8"/>
+            <h2 className="text-4xl font-semibold">Scott Kenning</h2>
+            <p className="text-xl">
+                A dedicated and passionate 20-year-old Software Engineering student from the University of Victoria. I have a passion for coding, creating innovative solutions and learning new technologies. My journey in software development is always evolving and I am constantly seeking new challenges and experiences.
+            </p>
+        </div>
     )
 }

@@ -20,8 +20,10 @@
     "react": "18.2.0",
     "react-animation-on-scroll": "^5.1.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.10.1",
     "react-reveal": "^1.2.2",
     "react-scroll-fade-animation": "^0.5.4",
+    "react-transition-group": "^4.4.5",
     "react-type-animation": "^2.1.2",
     "typescript": "4.9.4"
   },
