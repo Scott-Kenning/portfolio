@@ -36,11 +36,11 @@ export default function Home() {
         <Box title='Work' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Work' ? null : 'Work')}>
             <Work />
         </Box>
-        <Box title='Projects' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Projects' ? null : 'Projects')}>
-            <Projects selected={selectedBox === 'Projects'}/>
-        </Box>
         <Box title='About Me' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'About Me' ? null : 'About Me')}>
             <About />
+        </Box>
+        <Box title='Projects' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Projects' ? null : 'Projects')}>
+            <Projects selected={selectedBox === 'Projects'}/>
         </Box>
       </main>
       <footer className="p-4 flex justify-center items-center text-2xl md:flex hidden bg-gray-800">
