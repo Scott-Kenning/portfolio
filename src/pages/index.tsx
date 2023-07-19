@@ -32,11 +32,11 @@ export default function Home() {
           }
         </div>
       </header>
-      <main className={`flex-grow flex flex-col md:flex-row ${!selectedBox && "divide-y md:divide-y-0 divide-slate-500"} overflow-auto md:overflow-hidden`}>
-        <Box title='Work' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Work' ? null : 'Work')} borderClass="md:border-r md:border-slate-500">
+      <main className={`flex-grow flex flex-col md:flex-row ${!selectedBox && "md:divide-x divide-y md:divide-y-0 divide-slate-500"} overflow-auto md:overflow-hidden`}>
+        <Box title='Work' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Work' ? null : 'Work')}>
             <Work />
         </Box>
-        <Box title='Projects' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Projects' ? null : 'Projects')} borderClass="md:border-r md:border-slate-500">
+        <Box title='Projects' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Projects' ? null : 'Projects')}>
             <Projects selected={selectedBox === 'Projects'}/>
         </Box>
         <Box title='About Me' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'About Me' ? null : 'About Me')}>

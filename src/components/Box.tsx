@@ -6,10 +6,9 @@ type BoxProps = {
   selected: string | null
   onClick: () => void
   children?: any
-  borderClass?: string;
 }
 
-export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children, borderClass }) => {
+export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children }) => {
   const isSelected = selected === title;
   const [isRendered, setIsRendered] = useState(false);
   
@@ -20,7 +19,7 @@ export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children, bo
   } else if (selected) {
     boxClasses += "text-transparent md:w-0 h-0 bg-slate-600 md:h-full overflow-hidden";
   } else {
-    boxClasses += "cursor-pointer bg-slate-600 hover:text-4xl hover:bg-slate-700 w-full md:h-full h-1/3 overflow-hidden";
+    boxClasses += "cursor-pointer bg-slate-600 hover:bg-slate-700 w-full md:h-full h-1/3 overflow-hidden";
   }
 
   useEffect(() => {
@@ -35,7 +34,7 @@ export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children, bo
   }, [isSelected]);
 
   return (
-    <div className={`${boxClasses} ${!isRendered && borderClass}`} onClick={!isSelected ? onClick : undefined}>
+    <div className={boxClasses} onClick={!isSelected ? onClick : undefined}>
       {!isSelected && <p className='absolute items-center font-bold opacity-100 whitespace-nowrap'>{title}</p> }
           {/* <div className={`absolute inset-0 grid place-items-center transition-opacity duration-1000 z-10`}> */}
 
