@@ -79,7 +79,7 @@ export const Projects = ({ selected }: PropTypes) => {
         link="https:/studyspace.vikelabs.ca"
       /> */}
       </div>
-      <p className="italic text-base text-left my-4">This page is still in development. For now, checkout my <a href="https://github.com/Scott-Kenning" target="blank" className="underline">Github</a></p>
+      <p className="italic text-base text-left my-4">This page is still in development. For now, checkout my <a href="https://github.com/Scott-Kenning" target="blank" rel="noreferrer" className="underline">Github</a></p>
     </div>
   );
 };

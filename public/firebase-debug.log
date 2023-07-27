@@ -1,0 +1,73 @@
+[debug] [2023-07-27T09:13:19.910Z] ----------------------------------------------------------------------
+[debug] [2023-07-27T09:13:19.913Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Scott\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-27T09:13:19.913Z] CLI Version:   12.4.6
+[debug] [2023-07-27T09:13:19.913Z] Platform:      win32
+[debug] [2023-07-27T09:13:19.913Z] Node Version:  v20.5.0
+[debug] [2023-07-27T09:13:19.913Z] Time:          Thu Jul 27 2023 02:13:19 GMT-0700 (Pacific Daylight Saving Time)
+[debug] [2023-07-27T09:13:19.914Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-27T09:13:19.975Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-27T09:13:19.975Z] > authorizing via signed-in user (skenning128@gmail.com)
+[debug] [2023-07-27T09:13:19.975Z] [iam] checking project scottkenning for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-27T09:13:19.977Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/scottkenning:testIamPermissions [none]
+[debug] [2023-07-27T09:13:19.977Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/scottkenning:testIamPermissions x-goog-quota-user=projects/scottkenning
+[debug] [2023-07-27T09:13:19.977Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scottkenning:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-27T09:13:20.134Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/scottkenning:testIamPermissions 200
+[debug] [2023-07-27T09:13:20.134Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scottkenning:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-27T09:13:20.135Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/scottkenning [none]
+[debug] [2023-07-27T09:13:20.395Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/scottkenning 200
+[debug] [2023-07-27T09:13:20.395Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/scottkenning {"projectId":"scottkenning","projectNumber":"545892475368","displayName":"scottkenning","name":"projects/scottkenning","resources":{"hostingSite":"scottkenning"},"state":"ACTIVE","etag":"1_3752b97c-2ed0-4afa-a287-d32eaef036a8"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] info  - Linting and checking validity of types...
+
+[info] info  - Creating an optimized production build...
+
+[info] info  - Compiled successfully
+
+[info] info  - Collecting page data...
+
+[info] info  - Generating static pages (0/3)
+
+[info] info  - Generating static pages (3/3)
+
+[info] info  - Finalizing page optimization...
+
+[info] 
+
+[info] Route (pages)                              Size     First Load JS
+┌ ○ /                                      9.32 kB        82.9 kB
+├   /_app                                  0 B            73.6 kB
+├ ○ /404                                   181 B          73.8 kB
+└ λ /api/hello                             0 B            73.6 kB
++ First Load JS shared by all              76.7 kB
+  ├ chunks/framework-114634acb84f8baa.js   45.4 kB
+  ├ chunks/main-1227de1dc46e1332.js        27.1 kB
+  ├ chunks/pages/_app-dc20f3f098449a93.js  355 B
+  ├ chunks/webpack-8fa1640cc84ba8fe.js     750 B
+  └ css/7f21224ee549f071.css               3.09 kB
+
+[info] 
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+○  (Static)  automatically rendered as static HTML (uses no initial props)
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static route /api/hello
+[info] 
+[debug] [2023-07-27T09:14:08.725Z] Error: Command failed: npm i --omit dev --no-audit
+    at checkExecSyncError (node:child_process:887:11)
+    at execSync (node:child_process:959:15)
+    at prepareFrameworks (C:\Users\Scott\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\index.js:367:42)
+    at async deploy (C:\Users\Scott\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:55:13)
+[error] 
+[error] Error: An unexpected error has occurred.
