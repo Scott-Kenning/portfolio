@@ -11,7 +11,7 @@ type BoxProps = {
 export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children }) => {
   const isSelected = selected === title;
   
-  let boxClasses = "text-4xl text-white grid place-items-center transition-all duration-500 relative ";
+  let boxClasses = "text-4xl  grid place-items-center transition-all duration-500 relative ";
 
   if (isSelected) {
     boxClasses += "md:w-full h-full bg-slate-700 md:overflow-hidden overflow-auto";

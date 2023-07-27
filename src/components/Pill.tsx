@@ -3,6 +3,6 @@ type PropsType = {
 }
 
 export const Pill = ({text}: PropsType) => {
-    return <p className="rounded-lg bg-slate-600 text-center text-white px-2 py-1 h-min">{text}</p>
+    return <p className="rounded-lg bg-slate-600 text-center  px-2 py-1 h-min">{text}</p>
 
 }

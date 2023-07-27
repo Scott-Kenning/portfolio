@@ -16,20 +16,20 @@ export default function Home() {
   ];
 
   return (
-    <div className="text-neutral-200 h-screen flex flex-col bg-slate-700 overflow-auto md:overflow-hidden">
+    <div className="text-neutral-100 h-screen flex flex-col bg-slate-700 overflow-auto md:overflow-hidden">
       <header className="p-4 flex justify-between md:justify-center items-center bg-gray-800 text-2xl">
-        <div className="font-semibold text-center ">Scott Kenning</div>
+        <div className="font-bold text-center ">Scott Kenning</div>
         <div className="md:hidden relative">
           <FaBars onClick={() => setMenuOpen(!isMenuOpen)} />
-          {isMenuOpen && 
-            <div className="z-10 absolute flex flex-col items-start -right-2 mt-7 rounded bg-gray-800 shadow-lg divide-y divide-gray-600 transition-all duration-300 ease-in-out">
+          {/* {isMenuOpen &&  */}
+            <div className={`z-10 absolute flex flex-col items-start -right-4 mt-5 bg-gray-800 shadow-lg divide-y divide-gray-600 border-t border-gray-600 transition-all duration-100 ease-in-out opacity-0 ${isMenuOpen && "opacity-100"}`}>
               {socialLinks.map(({ href, icon, name }, index) => (
-                <a key={index} href={href} className="block py-2 px-6 pl-4 text-white text-base flex items-center gap-2 w-full" target="_blank">
+                <a key={index} href={href} className="block py-2 px-6 pl-4  text-base flex items-center gap-2 w-full" target="_blank">
                   {icon} {name}
                 </a>
               ))}
             </div>
-          }
+          {/* } */}
         </div>
       </header>
       <main className={`flex-grow flex flex-col md:flex-row ${!selectedBox && "md:divide-x divide-y md:divide-y-0 divide-slate-500"} overflow-auto md:overflow-hidden`}>
