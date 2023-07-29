@@ -1,18 +1,19 @@
 import { useState } from 'react'
-import { FaGithub, FaLinkedin, FaEnvelope, FaBars } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaFile, FaPage4, FaFilePdf, FaPagelines } from "react-icons/fa";
 import { Box } from '../components/Box'
 import { Projects } from '../components/Projects'
 import { Work } from '../components/Work';
 import About from '../components/About';
 
 export default function Home() {
-  const [selectedBox, setSelectedBox] = useState<'Work' | 'About Me' | 'Projects' | null>(null);
+  const [selectedBox, setSelectedBox] = useState<'Work' | 'About' | 'Projects' | null>(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const socialLinks = [
     { href: "mailto:skenning128@gmail.com", icon: <FaEnvelope />, name:"Email" },
     { href: "https://www.linkedin.com/in/scott-kenning", icon: <FaLinkedin />, name:"LinkedIn" },
     { href: "https://github.com/Scott-Kenning", icon: <FaGithub />, name:"Github" },
+    { href: "/Resume.pdf", icon: <FaFile/>, name:"Resume" },
   ];
 
   return (
@@ -22,9 +23,9 @@ export default function Home() {
         <div className="md:hidden relative">
           <FaBars onClick={() => setMenuOpen(!isMenuOpen)} />
           {/* {isMenuOpen &&  */}
-            <div className={`z-10 absolute flex flex-col items-start -right-4 mt-5 bg-gray-800 shadow-lg divide-y divide-gray-600 border-t border-gray-600 transition-all duration-100 ease-in-out opacity-0 ${isMenuOpen && "opacity-100"}`}>
+            <div className={`z-20 absolute flex flex-col items-start -right-4 mt-5 bg-gray-800 shadow-lg divide-y divide-gray-600 border-t border-gray-600 transition-all duration-100 ease-in-out opacity-100 ${!isMenuOpen && "opacity-0 hidden"}`}>
               {socialLinks.map(({ href, icon, name }, index) => (
-                <a key={index} href={href} className="block py-2 px-6 pl-4  text-base flex items-center gap-2 w-full" target="_blank" rel="noreferrer">
+                <a key={index} href={href} className="block py-2 px-6 pl-4 text-base flex items-center gap-2 w-full" target="_blank" rel="noreferrer">
                   {icon} {name}
                 </a>
               ))}
@@ -36,7 +37,7 @@ export default function Home() {
         <Box title='Work' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Work' ? null : 'Work')}>
             <Work />
         </Box>
-        <Box title='About Me' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'About Me' ? null : 'About Me')}>
+        <Box title='About' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'About' ? null : 'About')}>
             <About />
         </Box>
         <Box title='Projects' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Projects' ? null : 'Projects')}>

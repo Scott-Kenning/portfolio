@@ -12,9 +12,7 @@ module.exports = {
         'ellipse-long': '200% 100%',
       },
       fontFamily: {
-        'Lato': ['Lato', 'sans-serif'],
-        'Pencil': ['Coming Soon', 'cursive'],
-        'sans': ['Montserrat', 'sans-serif']
+        'sans': ['Inter', 'sans-serif']
       },
       keyframes: {
         toggleLeft: {
