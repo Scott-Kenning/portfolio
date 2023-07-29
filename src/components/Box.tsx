@@ -27,7 +27,7 @@ export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children }) 
 
   return (
     <div className={boxClasses} onClick={!isSelected ? onClick : undefined}>
-      <div className={`w-full items-center flex flex-col justify-center transition-opacity duration-500 ${isSelected ? "duration-200 opacity-0" : "opacity-100"}`}>
+      <div className={`w-full items-center flex flex-col justify-center transition-opacity duration-200 md:duration-500 ${isSelected ? "duration-100 md:duration-200 opacity-0" : "opacity-100"}`}>
 
         <Image src={title == "Work" ? BusinessMan : title == "About" ? Profile : Project} alt={title} className="h-24 md:h-48 w-64" />
         <p className={`items-center my-4 font-bold whitespace-nowrap text-3xl`}>{title}</p>

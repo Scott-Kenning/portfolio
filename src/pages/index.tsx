@@ -17,13 +17,13 @@ export default function Home() {
   ];
 
   return (
-    <div className="text-neutral-100 h-screen flex flex-col bg-slate-700 overflow-auto md:overflow-hidden">
+    <div className="text-neutral-100 h-screen max-h-screen flex flex-col bg-slate-700 overflow-auto md:overflow-hidden">
       <header className="p-4 flex justify-between md:justify-center items-center bg-gray-800 text-2xl">
         <div className="font-bold text-center ">Scott Kenning</div>
         <div className="md:hidden relative">
           <FaBars onClick={() => setMenuOpen(!isMenuOpen)} />
           {/* {isMenuOpen &&  */}
-            <div className={`z-20 absolute flex flex-col items-start -right-4 mt-5 bg-gray-800 shadow-lg divide-y divide-gray-600 border-t border-gray-600 transition-all duration-100 ease-in-out opacity-100 ${!isMenuOpen && "opacity-0 hidden"}`}>
+            <div className={`z-20 absolute flex flex-col items-start -right-4 mt-5 bg-gray-800 shadow-lg divide-y divide-gray-600 border-t border-gray-600 transition-all duration-200 ease-in-out opacity-100 ${!isMenuOpen && "opacity-0 hidden"}`}>
               {socialLinks.map(({ href, icon, name }, index) => (
                 <a key={index} href={href} className="block py-2 px-6 pl-4 text-base flex items-center gap-2 w-full" target="_blank" rel="noreferrer">
                   {icon} {name}
