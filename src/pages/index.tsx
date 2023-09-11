@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from 'react'
 import { FaGithub, FaLinkedin, FaEnvelope, FaBars, FaFile, FaPage4, FaFilePdf, FaPagelines } from "react-icons/fa";
 import { Box } from '../components/Box'
@@ -18,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="text-neutral-100 h-screen max-h-screen flex flex-col bg-slate-700 overflow-auto md:overflow-hidden">
-      <header className="p-4 flex justify-between md:justify-center items-center bg-gray-800 text-2xl">
+      <header className="p-2 flex justify-between md:justify-center items-center bg-gray-800 text-xl">
         <div className="font-bold text-center ">Scott Kenning</div>
         <div className="md:hidden relative">
           <FaBars onClick={() => setMenuOpen(!isMenuOpen)} />
@@ -44,7 +46,7 @@ export default function Home() {
             <Projects selected={selectedBox === 'Projects'}/>
         </Box>
       </main>
-      <footer className="p-4 flex justify-center items-center text-2xl md:flex hidden bg-gray-800">
+      <footer className="p-2 justify-center items-center text-2xl md:flex hidden bg-gray-800">
         {socialLinks.map(({ href, icon }, index) => (
           <a key={index} href={href} className="mx-2" target="_blank" rel="noreferrer">
             {icon}

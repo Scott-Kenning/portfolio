@@ -1,8 +1,7 @@
 type PropsType = {
-    text: string;
+    children: React.ReactNode;
 }
 
-export const Pill = ({text}: PropsType) => {
-    return <p className="rounded-lg bg-slate-600 text-center  px-2 py-1 h-min">{text}</p>
-
+export const Pill = ({children}: PropsType) => {
+    return <p className="rounded-lg bg-slate-600 text-center px-2 py-1 h-min font-mono">{children}</p>
 }

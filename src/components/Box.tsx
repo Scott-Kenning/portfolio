@@ -15,7 +15,7 @@ type BoxProps = {
 export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children }) => {
   const isSelected = selected === title;
   
-  let boxClasses = "text-4xl flex items-center justify-center grid transition-all duration-500 relative ";
+  let boxClasses = "text-xl flex items-center justify-center grid transition-all duration-500 relative ";
 
   if (isSelected) {
     boxClasses += "md:w-full h-full bg-slate-700 md:overflow-hidden overflow-auto";
@@ -29,8 +29,8 @@ export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children }) 
     <div className={boxClasses} onClick={!isSelected ? onClick : undefined}>
       <div className={`w-full items-center flex flex-col justify-center transition-opacity duration-200 md:duration-500 ${isSelected ? "duration-100 md:duration-200 opacity-0" : "opacity-100"}`}>
 
-        <Image src={title == "Work" ? BusinessMan : title == "About" ? Profile : Project} alt={title} className="h-24 md:h-48 w-64" />
-        <p className={`items-center my-4 font-bold whitespace-nowrap text-3xl`}>{title}</p>
+        <Image src={title == "Work" ? BusinessMan : title == "About" ? Profile : Project} alt={title} className="h-24 md:h-40 w-52" />
+        <p className={`items-center my-4 font-bold whitespace-nowrap text-2xl`}>{title}</p>
       </div>
       {isSelected && <div className={`z-20 absolute left-4 top-4 cursor-pointer text-base transition-none ${isSelected ? "opacity-100" : "opacity-0"}`} onClick={onClick}>
             <FaArrowLeft size="3em" className='fixed text-neutral-200 drop-shadow-lg shadow-white'/>

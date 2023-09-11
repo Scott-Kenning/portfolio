@@ -12,7 +12,7 @@ export const Work = () => {
         <TimelineItem 
             date="January - April 2022"
             title="Leanpub - Full Stack Developer"
-            description="In my first co-op, I was a full stack developer on the Leanpub website. I started out doing minor bug fixes, but by the end of the term I was solo developing large web features such as the 'Community edition'."
+            description="In my first co-op, I was a full stack developer working on the Leanpub website. I started out doing minor bug fixes, but by the end of the term I was solo developing large web features such as the 'Community Edition'."
             imageSrc={WebDevImage}
             // reverse
         />
@@ -26,14 +26,14 @@ export const Work = () => {
         <TimelineItem 
             date="May - August 2023"
             title="Leanpub - Full Stack Developer"
-            description="For my third co-op I returned to Leanpub as a Full Stack Developer, where my main focus was on designing and implementing the new Remix.run storefront. I also helped integrate ChatGPT into Leanpub, automating translations, copy edits, and transcriptions of e-books."
+            description="For my third co-op I returned to Leanpub as a Full Stack Developer, where my main focus was implementing EditAI, an OpenAI powered copy editor for ebooks. I also designed and developed large sections of the new storefront."
             imageSrc={AIImage}
             // reverse
         />
         <TimelineItem 
             date="January - April 2024"
-            title="[ Your Company Name ]"
-            description="I'm looking for a job! If you're hiring co-op students in the spring and you like what you see, please send me an email or connect with me on LinkedIn."
+            title="[ Your Company Name ] - Future Job Title"
+            description="I'm looking for a job! If you're hiring co-op student, please send me an email or connect with me on LinkedIn."
             imageSrc={hiringImage}
             // reverse
         />
