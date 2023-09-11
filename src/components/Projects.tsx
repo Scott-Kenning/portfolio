@@ -24,8 +24,8 @@ const ProjectCard: FunctionComponent<ProjectCardProps> = ({ image, title, demoLi
           <div className="w-full h-full p-4">
             <h3 className="text-lg font-bold text-center mb-4">{title}</h3>
             <div className="flex w-full items-center justify-center gap-4 my-4">
-              <a href={demoLink} target="_blank" className="rounded p-1 text-white text-sm bg-blue-700 hover:cursor-pointer hover:bg-blue-600">Demo</a>
-              <a href={codeLink} target="_blank" className="rounded p-1 text-white text-sm bg-blue-700 hover:cursor-pointer hover:bg-blue-600">Code</a>
+              <a href={demoLink} target="_blank" rel="noreferrer"  className="rounded p-1 text-white text-sm bg-blue-700 hover:cursor-pointer hover:bg-blue-600">Demo</a>
+              <a href={codeLink} target="_blank" rel="noreferrer"  className="rounded p-1 text-white text-sm bg-blue-700 hover:cursor-pointer hover:bg-blue-600">Code</a>
             </div>
           </div>
         </div>
@@ -47,8 +47,8 @@ export const Projects = ({ selected }: PropTypes) => {
               <h3 className="text-xl font-bold text-center">StudySpaceFinder</h3>
               <p className="text-sm mt-4 w-3/4 mx-auto">StudySpaceFinder is a website that shows empty classrooms around the University of Victoria. This project was done through the programming club Vikelabs, where I lead a team of 4 through the process of designing a functional website, from the initial idea and user research through to the finished product. The front end is built in React, and the server is written in Go</p>
               <div className="flex w-full items-center justify-center gap-4 my-4">
-                <a target="_blank" href="https://studyspace.vikelabs.ca" className="rounded p-1 text-white text-sm bg-blue-700 hover:cursor-pointer hover:bg-blue-600">Demo</a>
-                <a target="_blank" href="http://github.com/Vikelabs/StudySpaceFinder" className="rounded p-1 text-white text-sm bg-blue-700 hover:cursor-pointer hover:bg-blue-600">Code</a>
+                <a target="_blank" rel="noreferrer"  href="https://studyspace.vikelabs.ca" className="rounded p-1 text-white text-sm bg-blue-700 hover:cursor-pointer hover:bg-blue-600">Demo</a>
+                <a target="_blank" rel="noreferrer"  href="http://github.com/Vikelabs/StudySpaceFinder" className="rounded p-1 text-white text-sm bg-blue-700 hover:cursor-pointer hover:bg-blue-600">Code</a>
               </div>
             </div>
           </div>
