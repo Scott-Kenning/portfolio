@@ -27,7 +27,7 @@ export default function Home() {
           {/* {isMenuOpen &&  */}
             <div className={`z-20 absolute flex flex-col items-start -right-4 mt-5 bg-gray-800 shadow-lg divide-y divide-gray-600 border-t border-gray-600 transition-all duration-200 ease-in-out opacity-100 ${!isMenuOpen && "opacity-0 hidden"}`}>
               {socialLinks.map(({ href, icon, name }, index) => (
-                <a key={index} href={href} className="block py-2 px-6 pl-4 text-base flex items-center gap-2 w-full" target="_blank" rel="noreferrer"  rel="noreferrer">
+                <a key={index} href={href} className="block py-2 px-6 pl-4 text-base flex items-center gap-2 w-full" target="_blank" rel="noreferrer">
                   {icon} {name}
                 </a>
               ))}
@@ -48,7 +48,7 @@ export default function Home() {
       </main>
       <footer className="p-2 justify-center items-center text-2xl md:flex hidden bg-gray-800">
         {socialLinks.map(({ href, icon }, index) => (
-          <a key={index} href={href} className="mx-2" target="_blank" rel="noreferrer"  rel="noreferrer">
+          <a key={index} href={href} className="mx-2" target="_blank" rel="noreferrer">
             {icon}
           </a>
         ))}
