@@ -18,7 +18,7 @@ export const Work = () => {
         />
         <TimelineItem 
             date="September - December 2022"
-            title="PolicyMe - Software Engineering Intern in Test"
+            title="PolicyMe - Software Testing Engineer"
             description="My second co-op was a testing position at PolicyMe. On top of the usual test creation and test suite maintenance, I also implemented several infrastructure upgrades such as test integration with Slack and Hubspot."
             imageSrc={TestingImage}
             // reverse
@@ -30,13 +30,13 @@ export const Work = () => {
             imageSrc={AIImage}
             // reverse
         />
-        <TimelineItem 
+        {/* <TimelineItem 
             date="January - April 2024"
             title="[ Your Company Name ] - Future Job Title"
             description="I'm looking for a job! If you're hiring co-op student, please send me an email or connect with me on LinkedIn."
             imageSrc={hiringImage}
             // reverse
-        />
+        /> */}
     </Timeline>
 
 

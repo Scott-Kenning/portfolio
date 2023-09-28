@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="text-neutral-100 h-screen max-h-screen flex flex-col bg-slate-700 overflow-auto md:overflow-hidden">
-      <header className="p-2 flex justify-between md:justify-center items-center bg-gray-800 text-xl">
+      <header className="p-4 flex justify-between md:justify-center items-center bg-gray-800 text-xl 2xl:text-3xl">
         <div className="font-bold text-center ">Scott Kenning</div>
         <div className="md:hidden relative">
           <FaBars onClick={() => setMenuOpen(!isMenuOpen)} />
@@ -36,17 +36,17 @@ export default function Home() {
         </div>
       </header>
       <main className={`flex-grow flex flex-col md:flex-row ${!selectedBox && "md:divide-x divide-y md:divide-y-0 divide-slate-500"} overflow-auto md:overflow-hidden`}>
-        <Box title='Work' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Work' ? null : 'Work')}>
-            <Work />
-        </Box>
         <Box title='About' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'About' ? null : 'About')}>
             <About />
+        </Box>
+        <Box title='Work' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Work' ? null : 'Work')}>
+            <Work />
         </Box>
         <Box title='Projects' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Projects' ? null : 'Projects')}>
             <Projects selected={selectedBox === 'Projects'}/>
         </Box>
       </main>
-      <footer className="p-2 justify-center items-center text-2xl md:flex hidden bg-gray-800">
+      <footer className="p-4 justify-center items-center text-2xl md:flex hidden bg-gray-800 2xl:text-4xl">
         {socialLinks.map(({ href, icon }, index) => (
           <a key={index} href={href} className="mx-2" target="_blank" rel="noreferrer">
             {icon}
