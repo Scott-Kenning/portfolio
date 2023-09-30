@@ -47,11 +47,11 @@ export default function Home() {
         </Box>
       </main>
       <footer className="p-4 justify-center items-center text-2xl md:flex hidden bg-gray-800 2xl:text-4xl">
-        {socialLinks.map(({ href, icon }, index) => (
-          <a key={index} href={href} className="mx-2" target="_blank" rel="noreferrer">
-            {icon}
-          </a>
-        ))}
+      {socialLinks.map(({ href, icon, name }, index) => (
+        <a key={index} href={href} className="mx-2" target="_blank" rel="noreferrer" title={name}>
+          {icon}
+        </a>
+      ))}
       </footer>
     </div>
   )
