@@ -4,6 +4,7 @@ import { TimelineItem, Timeline} from "./TimeLine";
 import WebDevImage from "public/undraw_web_developer_re_h7ie.svg";
 import TestingImage from "public/undraw_split_testing_l1uw.svg";
 import AIImage from "public/undraw_firmware_re_fgdy.svg";
+import DesignImage from "public/undraw_design_notes_re_eklr.svg";
 import hiringImage from "public/undraw_job_hunt_re_q203.svg"
 
 export const Work = () => {
@@ -18,7 +19,7 @@ export const Work = () => {
         />
         <TimelineItem 
             date="September - December 2022"
-            title="PolicyMe - Software Testing Engineer"
+            title="PolicyMe - Testing Engineer"
             description="My second co-op was a testing position at PolicyMe. On top of the usual test creation and test suite maintenance, I also implemented several infrastructure upgrades such as test integration with Slack and Hubspot."
             imageSrc={TestingImage}
             // reverse
@@ -28,6 +29,13 @@ export const Work = () => {
             title="Leanpub - Full Stack Developer"
             description="For my third co-op I returned to Leanpub as a Full Stack Developer, where my main focus was implementing EditAI, an OpenAI powered copy editor for ebooks. I also designed and developed large sections of the new storefront."
             imageSrc={AIImage}
+            // reverse
+        />
+        <TimelineItem 
+            date="January - April 2024"
+            title="STR-SpeechTech - Developer"
+            description="My fourth co-op was at STR-SpeechTech, where I lead the design on the transition from a code monolith to a microservices architecture. I also redid the UI for the application, and implemented a new feature allowing the project to accept additional types of data"
+            imageSrc={DesignImage}
             // reverse
         />
         {/* <TimelineItem 

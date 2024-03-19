@@ -24,7 +24,6 @@ export default function Home() {
         <div className="font-bold text-center ">Scott Kenning</div>
         <div className="md:hidden relative">
           <FaBars onClick={() => setMenuOpen(!isMenuOpen)} />
-          {/* {isMenuOpen &&  */}
             <div className={`z-20 absolute flex flex-col items-start -right-4 mt-5 bg-gray-800 shadow-lg divide-y divide-gray-600 border-t border-gray-600 transition-all duration-200 ease-in-out opacity-100 ${!isMenuOpen && "opacity-0 hidden"}`}>
               {socialLinks.map(({ href, icon, name }, index) => (
                 <a key={index} href={href} className="block py-2 px-6 pl-4 text-base flex items-center gap-2 w-full" target="_blank" rel="noreferrer">
@@ -32,20 +31,21 @@ export default function Home() {
                 </a>
               ))}
             </div>
-          {/* } */}
         </div>
       </header>
+
       <main className={`flex-grow flex flex-col md:flex-row ${!selectedBox && "md:divide-x divide-y md:divide-y-0 divide-slate-500"} overflow-auto md:overflow-hidden`}>
-        <Box title='About' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'About' ? null : 'About')}>
-            <About />
+        <Box title='Projects' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Projects' ? null : 'Projects')}>
+            <Projects/>
         </Box>
         <Box title='Work' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Work' ? null : 'Work')}>
             <Work />
         </Box>
-        <Box title='Projects' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'Projects' ? null : 'Projects')}>
-            <Projects selected={selectedBox === 'Projects'}/>
+        <Box title='About' selected={selectedBox} onClick={() => setSelectedBox(selectedBox === 'About' ? null : 'About')}>
+            <About />
         </Box>
       </main>
+
       <footer className="p-4 justify-center items-center text-2xl md:flex hidden bg-gray-800 2xl:text-4xl">
       {socialLinks.map(({ href, icon, name }, index) => (
         <a key={index} href={href} className="mx-2" target="_blank" rel="noreferrer" title={name}>

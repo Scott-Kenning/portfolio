@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { FaArrowLeft } from "react-icons/fa";
 import Image from 'next/image';
 import BusinessMan from "public/undraw_businessman_unxs.svg"
@@ -14,7 +14,14 @@ type BoxProps = {
 
 export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children }) => {
   const isSelected = selected === title;
+  const boxRef = useRef<HTMLDivElement>(null);
   
+  useEffect(() => {
+    if (boxRef.current && !isSelected) {
+      boxRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [isSelected]);
+
   let boxClasses = "text-3xl flex items-center justify-center grid transition-all duration-500 relative ";
 
   if (isSelected) {
@@ -26,7 +33,7 @@ export const Box: React.FC<BoxProps> = ({ title, selected, onClick, children }) 
   }
 
   return (
-    <div className={boxClasses} onClick={!isSelected ? onClick : undefined}>
+    <div ref={boxRef} className={boxClasses} onClick={!isSelected ? onClick : undefined}>
       <div className={`w-full items-center flex flex-col justify-center transition-opacity duration-200 md:duration-500 ${isSelected ? "duration-100 md:duration-200 opacity-0" : "opacity-100"}`}>
 
         <Image src={title == "Work" ? BusinessMan : title == "About" ? Profile : Project} alt={title} className="h-24 md:h-40 w-52 2xl:h-60 2xl:w-80" />

@@ -31,7 +31,7 @@ export const TimelineItem = ({ date, title, description, imageSrc }: ItemProps) 
 
 export const Timeline = ({ children }: TimelineProps) => {
   return (
-    <div className="absolute flex flex-col md:flex-row w-screen justify-center text-base md:px-12 py-0 pt-16 md:py-24 gap-12 md:gap-24 md:gap-0">
+    <div className="absolute flex flex-col md:flex-row w-screen justify-center text-base mt-48 md:mt-0 md:px-12 py-0 pt-16 md:py-24 gap-12 md:gap-24 md:gap-0">
       <div className="hidden md:block h-1 bg-white absolute w-full top-1/2 left-0"></div>
       {children}
     </div>
