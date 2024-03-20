@@ -77,7 +77,7 @@ export const Projects = () => {
       title: "Blog Generator",
       shortDescription: "OpenAI",
       description: "One of my smaller projects, this website uses OpenAI's GPT-4 to generate blog posts. This project was made to showcase my experience with OpenAI, and how iterative prompting with even the simplest level of feedback can greatly refine the output. After realizing the utility that AI can offer while at Leanpub, I have been using AI tools extensively to aid in development, and to help with my day to day tasks.",
-      link: "https://studyspace.vikelabs.ca",
+      link: "https://blog-post-generator.vercel.app",
       image: ai,
     },
     
