@@ -38,11 +38,11 @@ const ProjectCard = ({ project, show }: { project: Project; show: boolean }) => 
       <h3 className="font-bold text-lg lg:text-xl">{project.title}</h3>
       <p className="text-base h-min">{project.description}</p>
       <div className="flex w-full">
-        <a className="m-1 flex-none w-[100%] md:w-2/3 h-full hover:opacity-80 hover:cursor-pointer transition-all duration-200" href={project.link} target="_blank">
+        <a className="m-1 flex-none w-[100%] md:w-2/3 h-full hover:opacity-80 hover:cursor-pointer transition-all duration-200" href={project.link} target="_blank" rel="noreferrer">
           <img src={project.image.src} alt={project.title} className="w-full h-full object-contain" />
         </a>
       </div>
-      <a href={project.link} target="_blank" className="w-24 text-center flex rounded-lg bg-blue-600 hover:bg-blue-600/80 text-center px-4 py-1 h-min font-mono transition-all duration-200">Demo →</a>
+      <a href={project.link} target="_blank" rel="noreferrer" className="w-24 text-center flex rounded-lg bg-blue-600 hover:bg-blue-600/80 text-center px-4 py-1 h-min font-mono transition-all duration-200">Demo →</a>
     </div>
   );
 };
