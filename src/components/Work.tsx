@@ -33,8 +33,8 @@ export const Work = () => {
         />
         <TimelineItem 
             date="January - April 2024"
-            title="STR-SpeechTech - Developer"
-            description="My fourth co-op was at STR-SpeechTech, where I lead the design on the transition from a code monolith to a microservices architecture. I also redid the UI for the application, and implemented a new feature allowing the project to accept additional types of data"
+            title="STR-SpeechTech - Software Developer"
+            description="My fourth co-op was at STR-SpeechTech, where I lead the design on the transition from a code monolith to a microservices architecture. I also did extensive UI design, and implemented a new feature allowing the project to accept additional types of data"
             imageSrc={DesignImage}
             // reverse
         />

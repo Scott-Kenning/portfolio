@@ -1,4 +1,3 @@
-import '../styles/globals.css'
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
