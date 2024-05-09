@@ -62,7 +62,7 @@ export const Projects = () => {
     {
       title: "MTG Card Search",
       shortDescription: "Full Stack",
-      description: "As an avid Magic: The Gathering player, I wanted to create a website that was involved with my hobby. MTG Card Search is a card database that shows details about all existing magic cards, including stuff that I couldn't find on existing websites such as what formats the cards are legal to be played in. This website was an experiment with Angular and the database is hosted on Supabase. All of the data was taken from the Scryfall API.",
+      description: "As an avid Magic: The Gathering player, I wanted to create a website that was involved with my hobby. MTG Card Search is a card database that shows details about all existing magic cards, including stuff that I couldn't find on existing websites such as what formats the cards are legal to be played in. This website was an experiment with Angular and the database is hosted on Supabase. All of the data was taken from the Scryfall API. This project has not been functional since Supabase updated it's free tier.",
       link: "https://mtg-search-app.vercel.app",
       image: mtg,
     },
