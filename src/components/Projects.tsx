@@ -77,7 +77,7 @@ export const Projects = () => {
       title: "Blog Generator",
       shortDescription: "OpenAI",
       description: "One of my smaller projects, this website uses OpenAI's GPT-4 to generate blog posts. This project was made to showcase my experience with OpenAI, and how iterative prompting with even the simplest level of feedback can greatly refine the output. After realizing the utility that AI can offer while at Leanpub, I have been using AI tools extensively to aid in development, and to help with my day to day tasks.",
-      link: "https://studyspace.vikelabs.ca",
+      link: "https://blog-post-generator.vercel.app",
       image: ai,
     },
     
@@ -99,7 +99,7 @@ export const Projects = () => {
 
   return (
     <div className="relative w-screen h-full flex flex-col items-center justify-start mt-40 md:mt-0 md:justify-center text-sm 2xl:text-lg">
-      <div className="grid lg:grid-cols-5 lg:h-2/3 max-h-1/2 w-full md:w-4/5 p-4 gap-8 lg:gap-16">
+      <div className="grid lg:grid-cols-5 lg:h-4/5  w-full md:w-4/5 p-4 gap-8 lg:gap-16">
         <div className="flex flex-col my-auto col-span-2 gap-2 h-full ">
           <h3 className="text-xl text-gray-300 py-1 px-2 border-b-2">Projects</h3>
           {projectData.map((project, index) => (
